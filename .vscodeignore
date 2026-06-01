@@ -1,0 +1,9 @@
+.git/**
+.vscode/**
+.gitignore
+node_modules/**
+scripts/**
+docs/**
+*.vsix
+new-extension-theme-goal.md
+package-lock.json

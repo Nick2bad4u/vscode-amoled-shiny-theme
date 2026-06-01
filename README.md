@@ -6,10 +6,17 @@ The result is meant to replace a pile of user settings with a real theme extensi
 
 ## Theme
 
-- Theme picker label: `AMOLED Shiny`
+- Theme picker labels:
+  - `AMOLED Shiny`
+  - `AMOLED Shiny Codex`
+  - `AMOLED Shiny Codex 2`
+  - `AMOLED Shiny Codex 3`
+  - `AMOLED Shiny Codex 4`
+  - `AMOLED Shiny Codex 5`
 - Source syntax theme: `rendinjast.amoled-black-0.1.0`
+- Extra syntax theme sources: `C:\Users\Nick\.codex\themes\converted-vscode-AmoledShinyBlack*.tmTheme`
 - Local source settings: `%APPDATA%\Code - Insiders\User\settings.json`
-- Generated theme file: `themes/amoled-shiny-color-theme.json`
+- Generated theme files: `themes/amoled-shiny*.json`
 
 ## Development
 
@@ -55,7 +62,7 @@ Open the extension in an Insiders Extension Development Host:
 npm run open:dev
 ```
 
-Then use the Color Theme picker and choose `AMOLED Shiny`.
+Then use the Color Theme picker and choose any `AMOLED Shiny` variant.
 
 ## Updating Colors Later
 
@@ -68,7 +75,7 @@ To update workbench colors:
 
 To update token colors:
 
-1. Edit the installed upstream source theme or manually edit `tokenColors` in the generated theme.
+1. Edit the installed upstream source theme, or edit one of the source `.tmTheme` files under `C:\Users\Nick\.codex\themes`.
 2. Prefer adding a repeatable transformation to `scripts/generate-theme.mjs` if the change should survive regeneration.
 3. Run `npm run validate`.
 

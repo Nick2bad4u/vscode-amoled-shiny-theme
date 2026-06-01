@@ -41,6 +41,31 @@
         "label": "AMOLED Shiny",
         "uiTheme": "vs-dark",
         "path": "./themes/amoled-shiny-color-theme.json"
+      },
+      {
+        "label": "AMOLED Shiny Codex",
+        "uiTheme": "vs-dark",
+        "path": "./themes/amoled-shiny-codex-color-theme.json"
+      },
+      {
+        "label": "AMOLED Shiny Codex 2",
+        "uiTheme": "vs-dark",
+        "path": "./themes/amoled-shiny-codex-2-color-theme.json"
+      },
+      {
+        "label": "AMOLED Shiny Codex 3",
+        "uiTheme": "vs-dark",
+        "path": "./themes/amoled-shiny-codex-3-color-theme.json"
+      },
+      {
+        "label": "AMOLED Shiny Codex 4",
+        "uiTheme": "vs-dark",
+        "path": "./themes/amoled-shiny-codex-4-color-theme.json"
+      },
+      {
+        "label": "AMOLED Shiny Codex 5",
+        "uiTheme": "vs-dark",
+        "path": "./themes/amoled-shiny-codex-5-color-theme.json"
       }
     ]
   },
@@ -56,6 +81,7 @@
   },
   "devDependencies": {
     "@vscode/vsce": "^3.9.1",
-    "jsonc-parser": "^3.3.1"
+    "jsonc-parser": "^3.3.1",
+    "plist": "^5.0.0"
   }
 }

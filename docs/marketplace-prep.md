@@ -11,7 +11,8 @@ This repo is ready for local VS Code and VS Code Insiders testing before any Mar
 - Run `npm run package`.
 - Install the VSIX with `code-insiders --install-extension ./amoled-shiny-0.0.1.vsix --force`.
 - Optionally install the same VSIX in stable VS Code with `code --install-extension ./amoled-shiny-0.0.1.vsix --force`.
-- Select `AMOLED Shiny` from the theme picker.
+- Confirm the theme picker shows all six variants: `AMOLED Shiny`, `AMOLED Shiny Codex`, `AMOLED Shiny Codex 2`, `AMOLED Shiny Codex 3`, `AMOLED Shiny Codex 4`, and `AMOLED Shiny Codex 5`.
+- Select each variant at least once and inspect syntax highlighting on representative TypeScript, Markdown, JSON, and PowerShell files.
 - Confirm the workbench colors and syntax colors match the intended look.
 
 ## Publishing Commands

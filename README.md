@@ -1,15 +1,15 @@
-# AMOLED Black Shiny Insiders
+# AMOLED Shiny
 
-A standalone VS Code theme extension for VS Code Insiders. It starts from Erfan Khadivar's MIT-licensed [AMOLED Black Theme](https://github.com/rendinjast/amoled-black), preserves the `AMOLED Black Shiny` TextMate syntax highlighting, and bakes Nick's current VS Code Insiders `workbench.colorCustomizations` into the theme.
+A standalone VS Code theme extension for VS Code and VS Code Insiders. It starts from Erfan Khadivar's MIT-licensed [AMOLED Black Theme](https://github.com/rendinjast/amoled-black), preserves the `AMOLED Black Shiny` TextMate syntax highlighting, and bakes Nick's current workbench colors into the theme.
 
 The result is meant to replace a pile of user settings with a real theme extension that can be versioned, packaged, installed, and eventually published.
 
 ## Theme
 
-- Theme picker label: `AMOLED Black Shiny Insiders`
+- Theme picker label: `AMOLED Shiny`
 - Source syntax theme: `rendinjast.amoled-black-0.1.0`
 - Local source settings: `%APPDATA%\Code - Insiders\User\settings.json`
-- Generated theme file: `themes/amoled-black-shiny-insiders-color-theme.json`
+- Generated theme file: `themes/amoled-shiny-color-theme.json`
 
 ## Development
 
@@ -43,21 +43,27 @@ Install the packaged theme into VS Code Insiders:
 npm run install:insiders
 ```
 
+Install the packaged theme into stable VS Code:
+
+```powershell
+npm run install:code
+```
+
 Open the extension in an Insiders Extension Development Host:
 
 ```powershell
 npm run open:dev
 ```
 
-Then use the Color Theme picker and choose `AMOLED Black Shiny Insiders`.
+Then use the Color Theme picker and choose `AMOLED Shiny`.
 
 ## Updating Colors Later
 
 To update workbench colors:
 
-1. Edit `workbench.colorCustomizations` in VS Code Insiders settings.
+1. Edit `workbench.colorCustomizations` in VS Code or VS Code Insiders settings.
 2. Run `npm run generate`.
-3. Review the diff in `themes/amoled-black-shiny-insiders-color-theme.json`.
+3. Review the diff in `themes/amoled-shiny-color-theme.json`.
 4. Run `npm run validate` and reinstall/package as needed.
 
 To update token colors:
@@ -68,7 +74,7 @@ To update token colors:
 
 To update semantic token colors:
 
-1. Add `editor.semanticTokenColorCustomizations` in VS Code Insiders settings.
+1. Add `editor.semanticTokenColorCustomizations` in VS Code or VS Code Insiders settings.
 2. Run `npm run generate`.
 3. Check that `semanticTokenColors` appears in the generated theme.
 
@@ -80,4 +86,4 @@ Before publishing to the Visual Studio Marketplace, confirm your Marketplace pub
 
 ## Marketplace Preparation
 
-Do not publish until the local VS Code Insiders test pass has been reviewed. The official VS Code docs currently recommend `@vscode/vsce` for packaging and publishing extensions, and the package script uses that tool.
+Do not publish until the local VS Code and VS Code Insiders test pass has been reviewed. The official VS Code docs currently recommend `@vscode/vsce` for packaging and publishing extensions, and the package script uses that tool.

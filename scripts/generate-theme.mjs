@@ -25,7 +25,7 @@ const settingsPath = join(
 const outputPath = join(
   repoRoot,
   "themes",
-  "amoled-black-shiny-insiders-color-theme.json",
+  "amoled-shiny-color-theme.json",
 );
 
 for (const path of [sourceThemePath, settingsPath]) {
@@ -54,7 +54,7 @@ delete workbenchColors.$schema;
 
 const theme = {
   $schema: "vscode://schemas/color-theme",
-  name: "AMOLED Black Shiny Insiders",
+  name: "AMOLED Shiny",
   type: "dark",
   semanticHighlighting: settings["editor.semanticHighlighting.enabled"] ?? true,
   colors: workbenchColors,

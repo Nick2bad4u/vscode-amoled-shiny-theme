@@ -1,6 +1,6 @@
 # Marketplace Preparation
 
-This repo is ready for local VS Code Insiders testing before any Marketplace submission.
+This repo is ready for local VS Code and VS Code Insiders testing before any Marketplace submission.
 
 ## Pre-Publish Checklist
 
@@ -9,8 +9,9 @@ This repo is ready for local VS Code Insiders testing before any Marketplace sub
 - Confirm `LICENSE` and `THIRD_PARTY_NOTICES.md` preserve the upstream MIT notice.
 - Run `npm run validate`.
 - Run `npm run package`.
-- Install the VSIX with `code-insiders --install-extension ./amoled-black-shiny-insiders-0.0.1.vsix --force`.
-- In VS Code Insiders, select `AMOLED Black Shiny Insiders` from the theme picker.
+- Install the VSIX with `code-insiders --install-extension ./amoled-shiny-0.0.1.vsix --force`.
+- Optionally install the same VSIX in stable VS Code with `code --install-extension ./amoled-shiny-0.0.1.vsix --force`.
+- Select `AMOLED Shiny` from the theme picker.
 - Confirm the workbench colors and syntax colors match the intended look.
 
 ## Publishing Commands

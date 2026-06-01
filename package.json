@@ -1,7 +1,7 @@
 {
-  "name": "amoled-black-shiny-insiders",
-  "displayName": "AMOLED Black Shiny Insiders",
-  "description": "A VS Code Insiders-focused AMOLED black theme derived from AMOLED Black Shiny with Nick's workbench colors baked in.",
+  "name": "amoled-shiny",
+  "displayName": "AMOLED Shiny",
+  "description": "A polished AMOLED black theme derived from AMOLED Black Shiny with Nick's workbench colors baked in.",
   "version": "0.0.1",
   "publisher": "Nick2bad4u",
   "license": "MIT",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nick2bad4u/vscode-amoled-black-shiny-insiders-theme.git"
+    "url": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme.git"
   },
-  "homepage": "https://github.com/Nick2bad4u/vscode-amoled-black-shiny-insiders-theme#readme",
+  "homepage": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme#readme",
   "bugs": {
-    "url": "https://github.com/Nick2bad4u/vscode-amoled-black-shiny-insiders-theme/issues"
+    "url": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme/issues"
   },
   "engines": {
-    "vscode": "^1.122.0"
+    "vscode": "^1.100.0"
   },
   "categories": [
     "Themes"
@@ -29,7 +29,7 @@
     "amoled",
     "black",
     "dark",
-    "insiders"
+    "shiny"
   ],
   "galleryBanner": {
     "color": "#000000",
@@ -38,9 +38,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "AMOLED Black Shiny Insiders",
+        "label": "AMOLED Shiny",
         "uiTheme": "vs-dark",
-        "path": "./themes/amoled-black-shiny-insiders-color-theme.json"
+        "path": "./themes/amoled-shiny-color-theme.json"
       }
     ]
   },
@@ -49,8 +49,9 @@
     "validate:theme": "node ./scripts/validate-theme.mjs",
     "validate:package": "vsce ls --tree",
     "validate": "npm run generate && npm run validate:theme && npm run validate:package",
-    "package": "vsce package --out ./amoled-black-shiny-insiders-0.0.1.vsix",
-    "install:insiders": "code-insiders --install-extension ./amoled-black-shiny-insiders-0.0.1.vsix --force",
+    "package": "vsce package --out ./amoled-shiny-0.0.1.vsix",
+    "install:code": "code --install-extension ./amoled-shiny-0.0.1.vsix --force",
+    "install:insiders": "code-insiders --install-extension ./amoled-shiny-0.0.1.vsix --force",
     "open:dev": "code-insiders --extensionDevelopmentPath=%cd% ."
   },
   "devDependencies": {

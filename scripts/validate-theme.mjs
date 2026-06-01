@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(__dirname, "..");
 const packageJsonPath = join(repoRoot, "package.json");
-const themePath = join(repoRoot, "themes", "amoled-black-shiny-insiders-color-theme.json");
+const themePath = join(repoRoot, "themes", "amoled-shiny-color-theme.json");
 
 const manifest = JSON.parse(readFileSync(packageJsonPath, "utf8"));
 const theme = JSON.parse(readFileSync(themePath, "utf8"));
@@ -17,19 +17,19 @@ if (!contributedTheme) {
   failures.push("package.json must contribute one theme.");
 }
 
-if (contributedTheme?.label !== "AMOLED Black Shiny Insiders") {
-  failures.push("Theme picker label must be AMOLED Black Shiny Insiders.");
+if (contributedTheme?.label !== "AMOLED Shiny") {
+  failures.push("Theme picker label must be AMOLED Shiny.");
 }
 
 if (contributedTheme?.uiTheme !== "vs-dark") {
   failures.push("Theme must target the dark VS Code UI.");
 }
 
-if (contributedTheme?.path !== "./themes/amoled-black-shiny-insiders-color-theme.json") {
+if (contributedTheme?.path !== "./themes/amoled-shiny-color-theme.json") {
   failures.push("package.json theme path does not match the generated theme file.");
 }
 
-if (theme.name !== "AMOLED Black Shiny Insiders") {
+if (theme.name !== "AMOLED Shiny") {
   failures.push("Theme JSON name is incorrect.");
 }
 

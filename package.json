@@ -1,98 +1,134 @@
 {
-  "name": "amoled-shiny",
-  "displayName": "AMOLED Shiny",
-  "description": "A polished AMOLED black theme derived from AMOLED Black Shiny with Nick's workbench colors baked in.",
-  "version": "0.0.1",
-  "publisher": "Nick2bad4u",
-  "license": "MIT",
-  "packageManager": "npm@11.15.0",
-  "author": {
-    "name": "Nick2bad4u",
-    "url": "https://github.com/Nick2bad4u"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme.git"
-  },
-  "homepage": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme#readme",
-  "bugs": {
-    "url": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme/issues"
-  },
-  "engines": {
-    "vscode": "^1.100.0"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "keywords": [
-    "theme",
-    "amoled",
-    "black",
-    "dark",
-    "shiny"
-  ],
-  "galleryBanner": {
-    "color": "#000000",
-    "theme": "dark"
-  },
-  "contributes": {
-    "themes": [
-      {
-        "label": "AMOLED Shiny",
-        "uiTheme": "vs-dark",
-        "path": "./themes/amoled-shiny-color-theme.json"
-      },
-      {
-        "label": "AMOLED Shiny Codex",
-        "uiTheme": "vs-dark",
-        "path": "./themes/amoled-shiny-codex-color-theme.json"
-      },
-      {
-        "label": "AMOLED Shiny Codex 2",
-        "uiTheme": "vs-dark",
-        "path": "./themes/amoled-shiny-codex-2-color-theme.json"
-      },
-      {
-        "label": "AMOLED Shiny Codex 3",
-        "uiTheme": "vs-dark",
-        "path": "./themes/amoled-shiny-codex-3-color-theme.json"
-      },
-      {
-        "label": "AMOLED Shiny Codex 4",
-        "uiTheme": "vs-dark",
-        "path": "./themes/amoled-shiny-codex-4-color-theme.json"
-      },
-      {
-        "label": "AMOLED Shiny Codex 5",
-        "uiTheme": "vs-dark",
-        "path": "./themes/amoled-shiny-codex-5-color-theme.json"
-      }
-    ]
-  },
-  "scripts": {
-    "generate": "node ./scripts/generate-theme.mjs",
-    "validate:theme": "node ./scripts/validate-theme.mjs",
-    "validate:package": "vsce ls --tree",
-    "validate": "npm run generate && npm run validate:theme && npm run validate:package",
-    "package": "vsce package --out ./amoled-shiny-0.0.1.vsix",
-    "install:code": "code --install-extension ./amoled-shiny-0.0.1.vsix --force",
-    "install:insiders": "code-insiders --install-extension ./amoled-shiny-0.0.1.vsix --force",
-    "open:dev": "code-insiders --extensionDevelopmentPath=%cd% .",
-    "lint:jscpd": "jscpd --config node_modules/jscpd-config-nick2bad4u/jscpd.json",
-    "changelog:generate": "git cliff --config node_modules/gitcliff-config-nick2bad4u/cliff.toml --github-repo Nick2bad4u/vscode-amoled-shiny-theme --output CHANGELOG.md",
-    "changelog:preview": "git cliff --config node_modules/gitcliff-config-nick2bad4u/cliff.toml --github-repo Nick2bad4u/vscode-amoled-shiny-theme --unreleased",
-    "changelog:release-notes": "git cliff --config node_modules/gitcliff-config-nick2bad4u/cliff.toml --github-repo Nick2bad4u/vscode-amoled-shiny-theme --current",
-    "lint:lychee": "lychee --config node_modules/lychee-config-nick2bad4u/lychee.toml .",
-    "lint:lychee:smoke": "lychee --config node_modules/lychee-config-nick2bad4u/lychee.toml --dump-inputs README.md"
-  },
-  "devDependencies": {
-    "@vscode/vsce": "^3.9.1",
-    "git-cliff": "^2.13.1",
-    "gitcliff-config-nick2bad4u": "^1.1.0",
-    "jscpd": "^5.0.12",
-    "jscpd-config-nick2bad4u": "^1.0.0",
-    "jsonc-parser": "^3.3.1",
-    "lychee-config-nick2bad4u": "^1.0.0",
-    "plist": "^5.0.0"
-  }
+    "name": "amoled-shiny",
+    "displayName": "AMOLED Shiny",
+    "version": "0.0.1",
+    "private": true,
+    "description": "A polished AMOLED black theme derived from AMOLED Black Shiny with Nick's workbench colors baked in.",
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "theme",
+        "amoled",
+        "black",
+        "dark",
+        "shiny"
+    ],
+    "homepage": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme#readme",
+    "bugs": {
+        "url": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Nick2bad4u/vscode-amoled-shiny-theme.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Nick2bad4u",
+        "url": "https://github.com/Nick2bad4u"
+    },
+    "contributors": [
+        {
+            "name": "Nick2bad4u",
+            "url": "https://github.com/Nick2bad4u"
+        }
+    ],
+    "publisher": "Nick2bad4u",
+    "type": "module",
+    "files": [
+        "themes",
+        "CHANGELOG.md",
+        "LICENSE",
+        "README.md",
+        "THIRD_PARTY_NOTICES.md"
+    ],
+    "scripts": {
+        "changelog:generate": "git cliff --config node_modules/gitcliff-config-nick2bad4u/cliff.toml --github-repo Nick2bad4u/vscode-amoled-shiny-theme --output CHANGELOG.md",
+        "changelog:preview": "git cliff --config node_modules/gitcliff-config-nick2bad4u/cliff.toml --github-repo Nick2bad4u/vscode-amoled-shiny-theme --unreleased",
+        "changelog:release-notes": "git cliff --config node_modules/gitcliff-config-nick2bad4u/cliff.toml --github-repo Nick2bad4u/vscode-amoled-shiny-theme --current",
+        "generate": "node ./scripts/generate-theme.mjs",
+        "install:code": "code --install-extension ./amoled-shiny-0.0.1.vsix --force",
+        "install:insiders": "code-insiders --install-extension ./amoled-shiny-0.0.1.vsix --force",
+        "lint:gitleaks": "gitleaks dir --config .gitleaks.toml .",
+        "lint:jscpd": "jscpd --config node_modules/jscpd-config-nick2bad4u/jscpd.json",
+        "lint:lychee": "lychee --config node_modules/lychee-config-nick2bad4u/lychee.toml .",
+        "lint:lychee:smoke": "lychee --config node_modules/lychee-config-nick2bad4u/lychee.toml --dump-inputs README.md",
+        "lint:package-json": "npmPkgJsonLint . --config .npmpackagejsonlintrc.json",
+        "lint:prettier": "prettier . --check",
+        "lint:prettier:fix": "prettier . --write",
+        "lint:remark": "remark . --frail --ignore-path .remarkignore",
+        "lint:remark:fix": "remark . --ignore-path .remarkignore --output",
+        "lint:yamllint": "yamllint -c .yamllint .",
+        "open:dev": "code-insiders --extensionDevelopmentPath=%cd% .",
+        "package": "vsce package --out ./amoled-shiny-0.0.1.vsix",
+        "update-deps": "ncu --configFileName .ncurc.json --configFilePath node_modules/ncu-config-nick2bad4u && npm update --force && npm install --force",
+        "validate": "npm run generate && npm run validate:theme && npm run validate:package",
+        "validate:package": "vsce ls --tree",
+        "validate:theme": "node ./scripts/validate-theme.mjs"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "AMOLED Shiny",
+                "uiTheme": "vs-dark",
+                "path": "./themes/amoled-shiny-color-theme.json"
+            },
+            {
+                "label": "AMOLED Shiny Codex",
+                "uiTheme": "vs-dark",
+                "path": "./themes/amoled-shiny-codex-color-theme.json"
+            },
+            {
+                "label": "AMOLED Shiny Codex 2",
+                "uiTheme": "vs-dark",
+                "path": "./themes/amoled-shiny-codex-2-color-theme.json"
+            },
+            {
+                "label": "AMOLED Shiny Codex 3",
+                "uiTheme": "vs-dark",
+                "path": "./themes/amoled-shiny-codex-3-color-theme.json"
+            },
+            {
+                "label": "AMOLED Shiny Codex 4",
+                "uiTheme": "vs-dark",
+                "path": "./themes/amoled-shiny-codex-4-color-theme.json"
+            },
+            {
+                "label": "AMOLED Shiny Codex 5",
+                "uiTheme": "vs-dark",
+                "path": "./themes/amoled-shiny-codex-5-color-theme.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^3.9.2",
+        "git-cliff": "^2.13.1",
+        "gitcliff-config-nick2bad4u": "^1.3.0",
+        "gitleaks-config-nick2bad4u": "^1.0.4",
+        "jscpd": "^5.0.12",
+        "jscpd-config-nick2bad4u": "^1.1.0",
+        "jsonc-parser": "^3.3.1",
+        "lychee-config-nick2bad4u": "^2.0.0",
+        "ncu-config-nick2bad4u": "^0.2.0",
+        "npm-check-updates": "^22.2.9",
+        "npm-package-json-lint": "^10.4.1",
+        "npm-package-json-lint-config-nick2bad4u": "^1.0.4",
+        "plist": "^5.0.0",
+        "prettier": "^3.9.5",
+        "prettier-config-nick2bad4u": "^1.1.1",
+        "remark": "^15.0.1",
+        "remark-cli": "^12.0.1",
+        "remark-config-nick2bad4u": "^1.1.3",
+        "secretlint": "^13.0.2",
+        "secretlint-config-nick2bad4u": "^1.1.2",
+        "yamllint-config-nick2bad4u": "^1.1.1"
+    },
+    "packageManager": "npm@12.0.1",
+    "engines": {
+        "vscode": "^1.100.0"
+    },
+    "galleryBanner": {
+        "color": "#000000",
+        "theme": "dark"
+    }
 }

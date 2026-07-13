@@ -14,7 +14,7 @@ The result is meant to replace a pile of user settings with a real theme extensi
   - `AMOLED Shiny Codex 4`
   - `AMOLED Shiny Codex 5`
 - Source syntax theme: `rendinjast.amoled-black-0.1.0`
-- Extra syntax theme sources: `C:\Users\Nick\.codex\themes\converted-vscode-AmoledShinyBlack*.tmTheme`
+- Extra syntax theme sources: `$env:USERPROFILE\.codex\themes\converted-vscode-AmoledShinyBlack*.tmTheme`
 - Local source settings: `%APPDATA%\Code - Insiders\User\settings.json`
 - Generated theme files: `themes/amoled-shiny*.json`
 
@@ -75,7 +75,7 @@ To update workbench colors:
 
 To update token colors:
 
-1. Edit the installed upstream source theme, or edit one of the source `.tmTheme` files under `C:\Users\Nick\.codex\themes`.
+1. Edit the installed upstream source theme, or edit one of the source `.tmTheme` files under `$env:USERPROFILE\.codex\themes`.
 2. Prefer adding a repeatable transformation to `scripts/generate-theme.mjs` if the change should survive regeneration.
 3. Run `npm run validate`.
 
